@@ -1,0 +1,35 @@
+# AmpionSocial
+
+<html>
+  <head>
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" />
+      <button type="submit">Upload</button>
+    </form>
+    <hr />
+    <div id="images">
+      <!-- Images will be displayed here -->
+    </div>
+  </body>
+  <script>
+    function displayImages() {
+      fetch('/images')
+        .then(response => response.json())
+        .then(images => {
+          const imageDiv = document.getElementById('images')
+          imageDiv.innerHTML = ''
+          for (const image of images) {
+            const img = document.createElement('img')
+            img.src = `/images/${image}`
+            imageDiv.appendChild(img)
+          }
+        })
+    }
+    displayImages()
+  </script>
+</html>
+
