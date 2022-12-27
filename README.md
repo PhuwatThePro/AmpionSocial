@@ -1,4 +1,4 @@
 # AmpionSocial
 
-[Click Here to Join Ampion Social!](/ampionsocial/ampionsocial1)
+[Click Here to Join Ampion Social!](/AmpionSocial/ampionsocial1)
 
